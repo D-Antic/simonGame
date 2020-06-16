@@ -49,6 +49,7 @@ $(document).keydown(function(){
     nextSequence();
     pressed = true;
   }
+  $("h2").text("");
 })
 
 // Check answer -----------
@@ -82,7 +83,8 @@ function checkAnswer(currentLevel){
       setTimeout(function(){
         $("body").removeClass("game-over");
       },200);
-      $("h1").text("Game Over, Press Any Key to Restart");
+      $("h1").text("Game Over");
+      $("h2").text("(Press Any Key to Restart)")
       startOver();
   }
 }
